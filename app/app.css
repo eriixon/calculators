@@ -1,0 +1,12 @@
+.request {
+    
+    color: antiquewhite;
+    margin-bottom: 50px;
+}
+input{
+    width: 200px;
+}
+.results{
+    margin-top: 30px;
+    min-height: 160px;
+}

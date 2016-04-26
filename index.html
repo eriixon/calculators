@@ -1,0 +1,87 @@
+<html ng-app="calculators">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CALCULATORS</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="app/app.css">
+</head>
+
+<body ng-controller="MainController as mc">
+    <div class="container-fluid">
+        <div class="row" style="background-color: blue;">
+            <div class="col-md-8 col-md-offset-2 request">          
+            <h1>Choose the calculator</h1>
+            <div class="btn-group" role="group">                    
+                    <button type="button" class="btn btn-default" ng-click="showCC(1)">Miles & Km</button>
+                    <button type="button" class="btn btn-default" ng-click="showCC(2)">Fahrenheit & Celsius</button>
+                    <button type="button" class="btn btn-default" ng-click="showCC(3)">Pounds & Kilograms</button>
+                    <button type="button" class="btn btn-default" ng-click="showCC(4)">Foot & Metr</button>
+                    <button type="button" class="btn btn-default" ng-click="showCC(5)">BMI</button>
+                    <button type="button" class="btn btn-default" ng-click="showCC(6)">Loans and Payments</button>
+            </div>
+         </div>
+      </div>
+      
+    <div class="row">
+    <div class="col-md-8 col-md-offset-2 results">
+                
+    <div ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
+        <h2>Calculate distance</h2>
+        <input  type="text" ng-model="x" style>
+        <button class="btn btn-info" ng-click="mc.calcul(1.6093, x)">Miles to KM</button>
+        <button class="btn btn-warning" ng-click="mc.calcul(0.6214, x)">KM to Miles</button>                
+    
+    </div>
+
+    <div ng-show="mc.showing === 2" ng-controller="FahrenheitVSCelsius as fc">
+        <h2>Calculate temperature</h2>
+        <input type="text" ng-model="x">
+        <button class="btn btn-info" ng-click="mc.temp(1, x)">C to F</button>
+        <button class="btn btn-warning" ng-click="mc.temp(2, x)">F to C</button>
+    </div>
+
+    <div ng-show="mc.showing === 3" ng-controller="PoundsVSKilograms as pk">
+        <h2>Calculate weight</h2>
+        <input type="text" ng-model="x">
+        <button class="btn btn-info" ng-click="mc.calcul(2.20462, x)">Kilograms to Pounds</button>
+        <button class="btn btn-warning" ng-click="mc.calcul(0.453592, x)">Pounds to Kilograms</button>
+    </div>
+
+    <div ng-show="mc.showing === 4" ng-controller="FootVSMetr as fm">
+        <h2>Calculate height</h2>
+        <input type="text" ng-model="x">
+        <button class="btn btn-info" ng-click="mc.calcul(3,2808, x)">Foot to Metr</button>
+        <button class="btn btn-warning" ng-click="mc.calcul(0,3048, x)">Metr to Foot</button>
+    </div>
+
+    <div ng-show="mc.showing === 5" ng-controller="BMI as bmi">
+        <h2>Your Body Mass Index</h2>
+        <input placeholder="height in cm" type="number" ng-model="bmi.h">
+        <input placeholder="weight in kg" type="number" ng-model="bmi.m">
+        <button class="btn btn-info" ng-click="bmi.calcul(bmi.h, bmi.m, mc)">Calculate</button>
+        <h3>{{bmi.mes}}</h3>
+    </div>
+
+    <div ng-show="mc.showing === 6" ng-controller="LoansAndPayments as lp">
+        <h2>Compound Interest Formula</h2>
+        <input placeholder="principal" type="number" ng-model="lp.p">
+        <input placeholder="interest"  type="number" ng-model="lp.r">
+        <input placeholder="periods"   type="number" ng-model="lp.n">
+        <button class="btn btn-info" ng-click="lp.calcul(lp.p, lp.r, lp.n, mc)">Calculate</button>
+
+    </div>
+    </div>
+    
+    <div class="col-md-8 col-md-offset-2"> <h1>Result: {{mc.result}}</h1> </div> 
+    
+    </div>   
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="app/app.js"></script>
+   
+</body>
+
+</html>
