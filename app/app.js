@@ -1,4 +1,4 @@
-var app = angular.module('calculators', []);
+var app = angular.module('converters', []);
 
 app.controller('MainController', function ($scope) {
     var mc = this;

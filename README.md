@@ -1,4 +1,5 @@
 # On-line converters:
+
 1 Miles to kilometers.
 
 2 Celsius degrees to Fahrenheit degrees.
@@ -7,6 +8,8 @@
 
 4 Foot to meters.
 
-5 Body Mass Index.
+5 Square foot to square meters
 
-6 Loan interes
+6 Body Mass Index.
+
+7 Loan interes
