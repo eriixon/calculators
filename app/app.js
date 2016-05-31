@@ -20,7 +20,7 @@ app.controller('MainController', function ($scope) {
 
 app.controller('MilesVSKm', function(){
     var mk = this;
-    mk.result = 0;
+    mk.result = null;
 })
 
 app.controller('FahrenheitVSCelsius', function(){

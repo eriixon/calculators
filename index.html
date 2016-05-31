@@ -17,7 +17,7 @@
           
           <div class="col-md-3 col-md-offset-1 converters">
               <button type="button" class="bttn" ng-click="showCC(1)">Miles vs Kilometrs</button>
-              <button type="button" class="bttn" ng-click="showCC(4)">Foot vs Metrs</button>
+              <button type="button" class="bttn" ng-click="showCC(4)">Foot vs Meters</button>
               <button type="button" class="bttn" ng-click="showCC()">Inches vs Centimeters</button>
               <button type="button" class="bttn" ng-click="showCC()">SQ Foot vs SQ Metrs</button>
               <button type="button" class="bttn" ng-click="showCC(2)">Fahrenheit vs Celsius</button>
@@ -33,15 +33,15 @@
                 
     <div class="col-md-12 calculation" ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
         <h1>Distance converter</h1>
-        <div class="input-group-lg">
+        <div class="input-group-lg" style="margin: 30px 0">
            <input type="text" class="form-control" placeholder="Input a number" ng-model="num">
         </div>
-        <div class="col-md-12" style="margin-bottom: 50px">
+        <div class="col-md-12" style="margin-bottom: 30px">
             <button type="button" class="bttn" ng-click="mc.calcul(1.6093, num)">Miles to Kilometers</button>
             <button type="button" class="bttn" ng-click="mc.calcul(1.6093, num)">Kilometers to Miles</button>
         </div>
         <div class="input-group-lg">
-           <input type="text" class="form-control" placeholder="Input a number" ng-model="{{mk.result}}">
+           <input type="text" class="form-control" placeholder="{{mk.result}}">
         </div>
     </div>
     
