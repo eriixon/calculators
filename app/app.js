@@ -60,6 +60,7 @@ app.controller('SQFTvsSQMS', function(){
 
 app.controller('FahrenheitVSCelsius', function(){
     var fc = this;
+    fc.res = 0;
     fc.calculation = function(con, num){
         if(con) {
                fc.res = ((num * 1.8) + 32).toFixed(1);

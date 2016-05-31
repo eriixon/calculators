@@ -27,7 +27,7 @@
 
    <div class="col-md-7 results">
                 
-    <div class="col-md-12 calculation" ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
+    <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
         <h1>Distance converter</h1>
         <div class="input-group-lg" style="margin: 30px 0">
            <input type="text" class="form-control text-center" placeholder="Input a number" ng-model="mk.num">
@@ -41,7 +41,7 @@
         </div>
     </div>
     
-    <div class="col-md-12 calculation" ng-show="mc.showing === 2" ng-controller="FootVSMetr as fm">
+    <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 2" ng-controller="FootVSMetr as fm">
         <h1>Height converter</h1>
         <div class="input-group-lg" style="margin: 30px 0">
            <input type="text" class="form-control text-center" placeholder="Input a number" ng-model="fm.num">
@@ -55,7 +55,7 @@
         </div>        
     </div>
     
-    <div class="col-md-12 calculation" ng-show="mc.showing === 3" ng-controller="InchesVSCentimeters as ic">
+    <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 3" ng-controller="InchesVSCentimeters as ic">
         <h1>Height converter</h1>
         <div class="input-group-lg" style="margin: 30px 0">
            <input type="text" class="form-control text-center" placeholder="Input a number" ng-model="ic.num">
@@ -69,7 +69,7 @@
         </div>        
     </div>
     
-    <div class="col-md-12 calculation" ng-show="mc.showing === 4" ng-controller="SQFTvsSQMS as sq">
+    <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 4" ng-controller="SQFTvsSQMS as sq">
         <h1>Square converter</h1>
         <div class="input-group-lg" style="margin: 30px 0">
            <input type="text" class="form-control text-center" placeholder="Input a number" ng-model="sq.num">
@@ -84,21 +84,21 @@
     </div>
     
 
-    <div class="col-md-12 calculation" ng-show="mc.showing === 5" ng-controller="FahrenheitVSCelsius as fc">
+    <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 5" ng-controller="FahrenheitVSCelsius as fc">
         <h1>Temperature converter</h1>
         <div class="input-group-lg" style="margin: 30px 0">
            <input type="text" class="form-control text-center" placeholder="Input a number" ng-model="fc.num">
         </div>
         <div class="col-md-12" style="margin-bottom: 30px">
-            <button type="button" class="bttn" ng-click="fc.calculation(true, sq.num)">Fahrenheit to Celsius</button>
-            <button type="button" class="bttn" ng-click="fc.calculation(false, sq.num)">Celsius to Fahrenheit</button>
+            <button type="button" class="bttn" ng-click="fc.calculation(false, fc.num)">Fahrenheit to Celsius</button>
+            <button type="button" class="bttn" ng-click="fc.calculation(true, fc.num)">Celsius to Fahrenheit</button>
         </div>
         <div class="input-group-lg">
            <input type="text" class="form-control text-center" placeholder="{{fc.res}}">
         </div>   
     </div>
 
-    <div class="col-md-12 calculation" ng-show="mc.showing === 6" ng-controller="PoundsVSKilograms as pk">
+    <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 6" ng-controller="PoundsVSKilograms as pk">
         <h2>Calculate weight</h2>
         <input type="text" ng-model="x">
         <button class="btn btn-info" ng-click="mc.calcul(2.20462, x)">Kilograms to Pounds</button>
@@ -107,7 +107,7 @@
 
 
 
-    <div class="col-md-12 calculation" ng-show="mc.showing === 7" ng-controller="BMI as bmi">
+    <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 7" ng-controller="BMI as bmi">
         <h2>Your Body Mass Index</h2>
         <input placeholder="height in cm" type="number" ng-model="bmi.h">
         <input placeholder="weight in kg" type="number" ng-model="bmi.m">
@@ -115,10 +115,6 @@
         <h3>{{bmi.mes}}</h3>
     </div>
 
-
-    </div>
-    
-    
     </div>   
   </div>
 </div> 
