@@ -27,8 +27,9 @@
 
 
     
-   <div class="col-md-7">         
-    <div class="results" ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
+   <div class="col-md-7 results">
+                
+    <div ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
         <h2>Calculate distance</h2>
         <input  type="text" ng-model="x" style>
         <button class="btn btn-info" ng-click="mc.calcul(1.6093, x)">Miles to KM</button>
@@ -79,7 +80,7 @@
     <div class="col-md-8 col-md-offset-2"> <h1>Result: {{mc.result}}</h1> </div> 
     
     </div>   
-    </div>
+  </div>
 </div> 
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
