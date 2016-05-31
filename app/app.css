@@ -3,14 +3,23 @@
     background-color: rgb(73,155,234);
     color: aliceblue;
     border: 1px solid antiquewhite;
+    margin-bottom: 3px;
 }
-.btn-group {
+.bttn {
     width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 10%;
+    font-size: 26px;
+    background-color: rgb(73,155,234);
+    color: aliceblue;
+    border: 1px solid antiquewhite;
+    border-radius: 5px;
+    margin-bottom: 3px;
 }
-.btn {
-    width: 16%;
-    margin-right: 3px;
-    border-radius: 5px !important;
+.bttn:hover{
+    background-color: antiquewhite;
+    color: limegreen;
 }
 body {
     background-color: rgb(73,155,234);
@@ -18,4 +27,8 @@ body {
 .results {
     border: 1px solid antiquewhite;
     border-radius: 5px;
+}
+
+.converters {
+    padding: 0;
 }
