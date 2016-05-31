@@ -12,10 +12,7 @@ app.controller('MainController', function ($scope) {
     mc.calcul = function(x, y){
         mc.result = (x * y).toFixed(3);
     }
-    mc.temp = function(x,y){
-    if (x === 1) mc.result = ((y * 1.8) + 32).toFixed(1);
-    if (x === 2 ) mc.result = ((y - 32) / 1.8).toFixed(1);
-    }
+
 });
 
 app.controller('MilesVSKm', function(){
@@ -50,10 +47,24 @@ app.controller('InchesVSCentimeters', function(){
     }
 });
 
+app.controller('SQFTvsSQMS', function(){
+    var sq = this;
+    sq.res = 0;
+    
+    sq.calculation = function(con, num){
+        if(con) {
+               sq.res = (num * 0.092903).toFixed(3);
+        } else sq.res = (num * 10.7639).toFixed(3);
+    }
+});
 
 app.controller('FahrenheitVSCelsius', function(){
     var fc = this;
-
+    fc.calculation = function(con, num){
+        if(con) {
+               fc.res = ((num * 1.8) + 32).toFixed(1);
+        } else fc.res = ((num - 32) / 1.8).toFixed(1);
+    }
 });
 
 app.controller('PoundsVSKilograms', function(){
