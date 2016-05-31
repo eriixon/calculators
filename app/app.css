@@ -1,5 +1,6 @@
 body {
     color: aliceblue;
+    background-color: black;
 }
 .jumbotron {
     margin-top: 1%;
@@ -10,10 +11,8 @@ body {
     padding-bottom: 20px;
 }
 .bttn {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 10%;
+    width: 99%;
+    height: 57px;
     font-size: 26px;
     background-color: rgb(73,155,234);
     border: 1px solid antiquewhite;
@@ -24,15 +23,11 @@ body {
     background-color: antiquewhite;
     color: limegreen;
 }
-body {
-    background-color: rgb(73,155,234);
-}
 .results {
     border: 1px solid antiquewhite;
     border-radius: 5px;
-    height: 72.5%;
-    margin-left: 5px;
-    width: 58%;
+    height: 74.2%;
+    background-color: rgb(73,155,234);
 }
 .converters {
     padding: 0;

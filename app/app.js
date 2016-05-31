@@ -8,10 +8,6 @@ app.controller('MainController', function ($scope) {
     $scope.showCC = function(x){
         mc.showing = x;
     }
-    
-    mc.calcul = function(x, y){
-        mc.result = (x * y).toFixed(3);
-    }
 
 });
 
@@ -70,6 +66,24 @@ app.controller('FahrenheitVSCelsius', function(){
 
 app.controller('PoundsVSKilograms', function(){
     var pk = this;
+    pk.res = 0;
+    
+    pk.calculation = function(con, num){
+        if(con) {
+               pk.res = (num * 0.453592).toFixed(3);
+        } else pk.res = (num * 2.20462).toFixed(3);
+    }
+});
+
+app.controller('GallonVSLiter', function(){
+    var gl = this;
+    gl.res = 0;
+    
+    gl.calculation = function(con, num){
+        if(con) {
+               gl.res = (num * 3.78541).toFixed(3);
+        } else gl.res = (num * 0,264172).toFixed(3);
+    }
 });
 
 
