@@ -24,22 +24,43 @@ app.controller('MilesVSKm', function(){
     
     mk.calculation = function(con, num){
         if(con) {
-            mk.res = (num * 1,60934).toFixed(3);
-        } else mk.res = (num * 0,621371).toFixed(3);
+            mk.res = (num * 1.60934).toFixed(3);
+        } else mk.res = (num * 0.621371).toFixed(3);
     }
 })
 
+app.controller('FootVSMetr', function(){
+    var fm = this;
+    fm.res = 0;
+    
+    fm.calculation = function(con, num){
+        if(con) {
+               fm.res = (num * 0.3048).toFixed(3);
+        } else fm.res = (num * 3.28084).toFixed(3);
+    }
+});
+app.controller('InchesVSCentimeters', function(){
+    var ic = this;
+    ic.res = 0;
+    
+    ic.calculation = function(con, num){
+        if(con) {
+               ic.res = (num * 2.54).toFixed(3);
+        } else ic.res = (num * 0.393701).toFixed(3);
+    }
+});
+
+
 app.controller('FahrenheitVSCelsius', function(){
     var fc = this;
+
 });
 
 app.controller('PoundsVSKilograms', function(){
     var pk = this;
 });
 
-app.controller('FootVSMetr', function(){
-    var fm = this;
-});
+
 
 app.controller('BMI', function(){
     var bmi = this;
