@@ -10,32 +10,30 @@
 <body ng-controller="MainController as mc">
     <div class="container-fluid">
         <div class="row">
-            
-            <div class="col-md-8 col-md-offset-2 request">          
-            <h1>Choose the converters / calculators</h1>
-            <div class="btn-group" role="group">                    
-                    <button type="button" class="btn btn-default" ng-click="showCC(1)">Miles & Km</button>
-                    <button type="button" class="btn btn-default" ng-click="showCC(2)">Fahrenheit & Celsius</button>
-                    <button type="button" class="btn btn-default" ng-click="showCC(3)">Pounds & Kilograms</button>
-                    <button type="button" class="btn btn-default" ng-click="showCC(4)">Foot & Metr</button>
-                    <button type="button" class="btn btn-default" ng-click="showCC(5)">BMI</button>
-                    <button type="button" class="btn btn-default" ng-click="showCC(6)">Loans and Payments</button>
+            <div class="jumbotron col-md-10 col-md-offset-1 text-center" >
+               <h1>Choose a calculator or converter</h1>
+               <div class="btn-group btn-group.btn-group-justifieds" role="group" aria-label="...">
+                    <button type="button" class="btn btn-primary" ng-click="showCC(1)">Miles & Km</button>
+                    <button type="button" class="btn btn-primary" ng-click="showCC(4)">Foot & Metr</button>
+                    <button type="button" class="btn btn-success" ng-click="showCC(2)">Fahrenheit & Celsius</button>
+                    <button type="button" class="btn btn-success" ng-click="showCC(3)">Pounds & Kilograms</button>
+                    <button type="button" class="btn btn-warning" ng-click="showCC(5)">BMI</button>
+                    <button type="button" class="btn btn-warning" ng-click="showCC(6)">Loans and Payments</button>
+               </div>
             </div>
-         </div>
-      </div>
-      
-    <div class="row">
-    <div class="col-md-8 col-md-offset-2 results">
+
+    
                 
-    <div ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
+    <div class=" col-md-10 col-md-offset-1 results" ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
         <h2>Calculate distance</h2>
         <input  type="text" ng-model="x" style>
         <button class="btn btn-info" ng-click="mc.calcul(1.6093, x)">Miles to KM</button>
         <button class="btn btn-warning" ng-click="mc.calcul(0.6214, x)">KM to Miles</button>                
     
     </div>
-
-    <div ng-show="mc.showing === 2" ng-controller="FahrenheitVSCelsius as fc">
+    
+    <div class="col-md-10 col-md-offset-1">
+    <div class="results" ng-show="mc.showing === 2" ng-controller="FahrenheitVSCelsius as fc">
         <h2>Calculate temperature</h2>
         <input type="text" ng-model="x">
         <button class="btn btn-info" ng-click="mc.temp(1, x)">C to F</button>

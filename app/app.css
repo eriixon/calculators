@@ -1,12 +1,21 @@
-.request {
-    
-    color: antiquewhite;
-    margin-bottom: 50px;
+.jumbotron {
+    margin-top: 1%;
+    background-color: rgb(73,155,234);
+    color: aliceblue;
+    border: 1px solid antiquewhite;
 }
-input{
-    width: 200px;
+.btn-group {
+    width: 100%;
 }
-.results{
-    margin-top: 30px;
-    min-height: 160px;
+.btn {
+    width: 16%;
+    margin-right: 3px;
+    border-radius: 5px !important;
+}
+body {
+    background-color: rgb(73,155,234);
+}
+.results {
+    border: 1px solid antiquewhite;
+    border-radius: 5px;
 }

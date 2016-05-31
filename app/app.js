@@ -14,7 +14,7 @@ app.controller('MainController', function ($scope) {
     }
     mc.temp = function(x,y){
     if (x === 1) mc.result = ((y * 1.8) + 32).toFixed(1);
-    if (x ===2 ) mc.result = ((y - 32) / 1.8).toFixed(1);
+    if (x === 2 ) mc.result = ((y - 32) / 1.8).toFixed(1);
     }
 });
 
