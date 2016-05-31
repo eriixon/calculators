@@ -129,11 +129,18 @@
 
 
     <div class="col-md-12 col-xs-12 calculation" ng-show="mc.showing === 8" ng-controller="BMI as bmi">
-        <h2>Your Body Mass Index</h2>
-        <input placeholder="height in cm" type="number" ng-model="bmi.h">
-        <input placeholder="weight in kg" type="number" ng-model="bmi.m">
-        <button class="btn btn-info" ng-click="bmi.calcul(bmi.h, bmi.m, mc)">Calculate</button>
-        <h3>{{bmi.mes}}</h3>
+        <h1>Your Body Mass Index</h1>
+        <div class="input-group-lg" style="margin: 30px 0">
+           <input type="text" class="form-control text-center" placeholder="Input your height in cm" ng-model="bmi.h">
+           <input type="text" class="form-control text-center" placeholder="Input your weight in kg" ng-model="bmi.w">
+        </div>
+        <div class="col-md-12" style="margin-bottom: 30px">
+            <button type="button" class="bttn" ng-click="bmi.calcul(bmi.h, bmi.w)">Calculate Your Index</button>
+        </div>
+        <div class="input-group-lg">
+           <input type="text" class="form-control text-center" placeholder="{{bmi.mes}}">
+           <h4>More information you can find in <a target="_blank" href="https://en.wikipedia.org/wiki/Body_mass_index">Wikipedia article</a></h4>
+        </div> 
     </div>
 
     </div>   

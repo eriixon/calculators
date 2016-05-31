@@ -86,31 +86,16 @@ app.controller('GallonVSLiter', function(){
     }
 });
 
-
-
 app.controller('BMI', function(){
     var bmi = this;
-    var z=0;
     bmi.mes;
+    bmi.res = 0;
     
-    bmi.calcul = function(h, m, mc) {
-        z = (m/(h*h)*10000).toFixed(1);
+    bmi.calcul = function(h, m) {
+        bmi.res = (m/(h*h)*10000).toFixed(1);
         
-        if(z < 18.5) bmi.mes = "Your result is lower than the norm"
-        if(18.5 < z && z < 25) bmi.mes = "Your result is fine"
-        if(z > 25) bmi.mes = "Your result is higher than the norm"        
-        mc.result = z;
-    }
-});
-
-app.controller('LoansAndPayments', function(){
-    debugger
-    var lp = this;
-    var i = 0;
-    
-    lp.calcul = function(p, r, n, mc){
-        r = (r+1)/100 + 1;
-        i = Math.pow(r,n);
-     mc.result = Math.round(i*p);   
+        if(bmi.res < 18.5) bmi.mes = "Your result is " + bmi.res + " and lower than the norm"
+        if(18.5 < bmi.res && bmi.res < 25) bmi.mes = "Your result is " + bmi.res + " and fine"
+        if(25 < bmi.res && bmi.res > 29.9) bmi.mes = "Your result is " + bmi.res + " and you have obesity"        
     }
 });
