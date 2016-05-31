@@ -40,3 +40,6 @@ body {
     text-align: center;
     margin: 20px 15px;
 }
+input {
+    margin: 20px 0;
+}
