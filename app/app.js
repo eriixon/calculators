@@ -20,11 +20,13 @@ app.controller('MainController', function ($scope) {
 
 app.controller('MilesVSKm', function(){
     var mk = this;
+    mk.res = 0;
     
-    mk.calcul = function(x, y){
-     mk.result = (x * y).toFixed(3);
+    mk.calculation = function(con, num){
+        if(con) {
+            mk.res = (num * 1,60934).toFixed(3);
+        } else mk.res = (num * 0,621371).toFixed(3);
     }
-
 })
 
 app.controller('FahrenheitVSCelsius', function(){
