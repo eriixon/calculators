@@ -2,6 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Converters/Calculators</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" href="app/app.css">
@@ -17,11 +18,12 @@
           <div class="col-md-3 col-md-offset-1 converters">
               <button type="button" class="bttn" ng-click="showCC(1)">Miles vs Kilometrs</button>
               <button type="button" class="bttn" ng-click="showCC(4)">Foot vs Metrs</button>
-              <button type="button" class="bttn" ng-click="showCC(4)">SQ Foot vs SQ Metrs</button>
+              <button type="button" class="bttn" ng-click="showCC()">Inches vs Centimeters</button>
+              <button type="button" class="bttn" ng-click="showCC()">SQ Foot vs SQ Metrs</button>
               <button type="button" class="bttn" ng-click="showCC(2)">Fahrenheit vs Celsius</button>
               <button type="button" class="bttn" ng-click="showCC(3)">Pounds vs Kilograms</button>
               <button type="button" class="bttn" ng-click="showCC(5)">Body Mass Index</button>
-              <button type="button" class="bttn" ng-click="showCC(6)">Loans and Payments</button>
+ 
          </div>
 
 
@@ -29,12 +31,23 @@
     
    <div class="col-md-7 results">
                 
-    <div ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
-        <h2>Calculate distance</h2>
-        <input  type="text" ng-model="x" style>
-        <button class="btn btn-info" ng-click="mc.calcul(1.6093, x)">Miles to KM</button>
-        <button class="btn btn-warning" ng-click="mc.calcul(0.6214, x)">KM to Miles</button>                
-    
+    <div class="col-md-12 calculation" ng-show="mc.showing === 1" ng-controller="MilesVSKm as mk">
+        <h1>Distance converter</h1>
+        
+        <div class="input-group-lg">
+           <input type="text" class="form-control" placeholder="Input a number" ng-model="num">
+        </div>
+        
+        <div class="btn-group btn-group-justified" role="group" style="margin-right: 5px">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-success" ng-click="mc.calcul(1.6093, num)>Miles to Kilometers</button>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-danger"  ng-click="mc.calcul(0.6214, num)">Kilometers to Miles</button>
+            </div>
+        </div>
+        <h1>Result: {{mk.result}}</h1>
+
     </div>
     
     <div class="col-md-8 col-md-offset-1">
@@ -77,7 +90,6 @@
     </div>
     </div>
     
-    <div class="col-md-8 col-md-offset-2"> <h1>Result: {{mc.result}}</h1> </div> 
     
     </div>   
   </div>
