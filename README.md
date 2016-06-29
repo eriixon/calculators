@@ -25,5 +25,5 @@ It is very easy. Just choose the converter, input some data and get a result.
 
 Technologies.
 
-HTML, CSS, JavaScript and JQuery.
+HTML, CSS, JavaScript and Angular JS.
 
