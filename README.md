@@ -1,4 +1,4 @@
-# On-line converters:
+# On-line Converters.
 
 Description.  
 The online services which can tourists from the USA to feel more comfortable in countries with metric standards and vice versa. There are the most necessary converters if you want to buy some goods and food or rent accommodations:
